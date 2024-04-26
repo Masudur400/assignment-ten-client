@@ -89,7 +89,7 @@ const Register = () => {
                     <p>Email</p>
                     <input className="border-2 rounded-md w-full px-4 py-2 mb-2" type="email" name="email" placeholder="Email" id="email" required />
                     {
-                        emailError && <p className="  text-green-500">{emailError}</p>
+                        emailError && <p className="  text-red-500">{emailError}</p>
                     }
 
                     <p>Password</p>
@@ -102,7 +102,7 @@ const Register = () => {
 
 
                     {
-                        passwordError && <p className="text-green-500">  {passwordError}</p>
+                        passwordError && <p className="text-red-500">  {passwordError}</p>
                     }
 
                     <input className=" rounded-md hover:bg-green-400 bg-green-500 w-full px-4 py-2 text-center font-bold text-lg text-white my-3" type="submit" value="Register" />
