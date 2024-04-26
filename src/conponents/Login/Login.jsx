@@ -5,7 +5,7 @@ import { AuthContext } from "../providers/AuthProvider";
 import Swal from "sweetalert2";
 
 const Login = () => {
-    const { login  } = useContext(AuthContext)
+    const { login,googleLogin  } = useContext(AuthContext)
 
     const [showPassword, setShowPassword] = useState(false);
 
@@ -39,14 +39,14 @@ const Login = () => {
 
 
     const handleGoogleLogin = () => {
-        // googleLogin()
-        //     .then(result => {
-        //         console.log(result)
-        //         navigate(location?.state ? location.state : '/')
-        //     })
-        //     .catch(error => {
-        //         console.log(error)
-        //     })
+        googleLogin()
+            .then(result => {
+                console.log(result)
+                // navigate(location?.state ? location.state : '/')
+            })
+            .catch(error => {
+                console.log(error)
+            })
     }
 
     const handleGithubLogin = () => {
@@ -66,7 +66,7 @@ const Login = () => {
                 <title>Login</title>
             </Helmet> */}
             <div data-aos="zoom-in-down" className="w-4/5 lg:w-1/3 md:w-2/3 mx-auto bg-gray-100 shadow-xl p-5 rounded-lg my-20">
-                <h2 className="text-2xl font-bold text-center text-red-500 animate__animated animate__rubberBand  my-3">LogIn Your Account</h2>
+                <h2 className="text-2xl font-bold text-center text-green-500 animate__animated animate__rubberBand  my-3">LogIn Your Account</h2>
                 <form onSubmit={handleLogin}>
 
 
@@ -81,19 +81,19 @@ const Login = () => {
                         </span>
                     </div>
 
-                    <input className=" rounded-md hover:bg-red-400 bg-red-500 w-full px-4 py-2 text-center font-bold text-lg text-white my-3" type="submit" value="Login" />
+                    <input className=" rounded-md hover:bg-green-400 bg-green-500 w-full px-4 py-2 text-center font-bold text-lg text-white my-3" type="submit" value="Login" />
                 </form>
 
-                <p>Do not have an account ? <Link to='/register' className="text-red-500 font-bold underline">please Register</Link></p>
+                <p>Do not have an account ? <Link to='/register' className="text-green-500 font-bold underline">please Register</Link></p>
 
                 <div className="divider my-5"></div>
                 <div className="mb-t flex justify-center gap-10">
                     <div>
-                        <button onClick={handleGoogleLogin} className="text-red-500 text-2xl bg-gray-200 p-3 rounded-2xl"><FaGoogle></FaGoogle></button>
+                        <button onClick={handleGoogleLogin} className="text-green-500 text-2xl bg-gray-200 p-3 rounded-2xl"><FaGoogle></FaGoogle></button>
                         <p>Google</p>
                     </div>
                     <div>
-                        <button onClick={handleGithubLogin} className="text-red-500 text-2xl bg-gray-200 p-3 rounded-2xl"> <FaGithub></FaGithub></button>
+                        <button onClick={handleGithubLogin} className="text-green-500 text-2xl bg-gray-200 p-3 rounded-2xl"> <FaGithub></FaGithub></button>
                         <p>Github</p>
                     </div>
                 </div>

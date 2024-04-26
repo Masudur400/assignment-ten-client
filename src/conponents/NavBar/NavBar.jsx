@@ -1,11 +1,18 @@
-import {   } from "react";
+import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
-import {  } from "../providers/AuthProvider";
+import { AuthContext } from "../providers/AuthProvider";
 
 
 const NavBar = () => {
 
-    // const { user, logOut } = useContext(AuthContext);
+    const { user, logOut } = useContext(AuthContext);
+
+
+    const handleLogOut = () =>{
+        logOut()
+        .then()
+        .catch()
+    }
 
     const links = <>
         <li> <NavLink to="/">Home</NavLink></li>
@@ -36,40 +43,22 @@ const NavBar = () => {
                         {links}
                     </ul>
                 </div>
-                <div className=" md:navbar-end ">
+                <div className=" md:navbar-end "> 
 
-                    <div className="flex max-sm:w-full max-sm:gap-32 gap-3  ">
-
-                        <div className="tooltip tooltip-bottom" data-tip= "hellow">
-                            <img className="w-12 h-12 rounded-full bg-white" alt="" src= ""
-                            />
-                        </div>
-
-                        <div className="flex gap-4">
-                                <Link to='/login' className="btn font-bold text-red-500">Login</Link>
-                                <Link to='/register' className="btn font-bold text-red-500">Register</Link>
-                            </div>
-
-                          </div>
-                     
-
-
-                    {/* {
+                    {
                         user ? <div className="flex max-sm:w-full max-sm:gap-32 gap-3  ">
 
                             <div className="tooltip tooltip-bottom" data-tip={user?.displayName}>
                                 <img className="w-12 h-12 rounded-full bg-white" alt="" src={user?.photoURL}
                                 />
-                            </div>
+                            </div> 
+                            <button onClick={handleLogOut}  className="btn font-bold text-green-500">Log Out</button> </div>
 
-
-
-                            <button onClick={handleSignOut} className="btn font-bold text-red-500">Log Out</button> </div>
                             : <div className="flex gap-4">
-                                <Link to='/login' className="btn font-bold text-red-500">Login</Link>
-                                <Link to='/register' className="btn font-bold text-red-500">Register</Link>
+                                <Link to='/login' className="btn font-bold text-green-500">Login</Link>
+                                <Link to='/register' className="btn font-bold text-green-500">Register</Link>
                             </div>
-                    } */}
+                    }
 
                 </div>
             </div>
