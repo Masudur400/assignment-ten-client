@@ -1,7 +1,12 @@
+import {   } from "react";
 import { Link, NavLink } from "react-router-dom";
+import {  } from "../providers/AuthProvider";
 
 
 const NavBar = () => {
+
+    // const { user, logOut } = useContext(AuthContext);
+
     const links = <>
         <li> <NavLink to="/">Home</NavLink></li>
         <li> <NavLink to="allCard">All Art & craft Items</NavLink></li>
@@ -40,9 +45,12 @@ const NavBar = () => {
                             />
                         </div>
 
+                        <div className="flex gap-4">
+                                <Link to='/login' className="btn font-bold text-red-500">Login</Link>
+                                <Link to='/register' className="btn font-bold text-red-500">Register</Link>
+                            </div>
 
-
-                        <button  className="btn font-bold text-green-500">Log Out</button> </div>
+                          </div>
                      
 
 
@@ -59,7 +67,7 @@ const NavBar = () => {
                             <button onClick={handleSignOut} className="btn font-bold text-red-500">Log Out</button> </div>
                             : <div className="flex gap-4">
                                 <Link to='/login' className="btn font-bold text-red-500">Login</Link>
-                                <Link to='/Register' className="btn font-bold text-red-500">Register</Link>
+                                <Link to='/register' className="btn font-bold text-red-500">Register</Link>
                             </div>
                     } */}
 

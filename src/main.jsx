@@ -14,6 +14,9 @@ import AddCraft from './conponents/AddCraft/AddCraft.jsx';
 import MyCraftList from './conponents/MyCraftList/MyCraftList.jsx';
 import Contact from './conponents/Contact/Contact.jsx';
 import Profile from './conponents/Profile/Profile.jsx';
+import Register from './conponents/Register/Register.jsx';
+import Login from './conponents/Login/Login.jsx';
+import AuthProvider from './conponents/providers/AuthProvider.jsx';
 
 const router = createBrowserRouter([
   {
@@ -44,6 +47,14 @@ const router = createBrowserRouter([
       {
         path:'profile',
         element:<Profile></Profile>
+      },
+      {
+        path:'register',
+        element:<Register></Register>
+      },
+      {
+        path:'login',
+        element:<Login></Login>
       }
     ]
   },
@@ -51,6 +62,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+     <AuthProvider>
      <RouterProvider router={router} />
+     </AuthProvider>
   </React.StrictMode>,
 )

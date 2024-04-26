@@ -5,14 +5,20 @@ const AddCraft = () => {
         const form = e.target
 
         const name = form.name.value
-        const quantity = form.quantity.value
-        const supplier = form.supplier.value
-        const taste = form.taste.value
-        const category = form.category.value
-        const details = form.details.value
-        const photo = form.photo.value
+        const itemName = form.itemName.value
+        const subcategoryName = form.subcategoryName.value
+        const shortDescription = form.shortDescription.value
+        const price = form.price.value
+        const rating = form.rating.value
+        const customization = form.customization.value
+        const processingTime = form.processingTime.value
+        const stockStatus = form.stockStatus.value
+        const email = form.email.value
+        const photo = form.photo.value 
 
-        const newCoffee ={name, quantity, supplier, taste, category, details, photo}
+        const newCraft={ name,itemName, subcategoryName,  shortDescription, price, rating, customization, processingTime, stockStatus, email, photo}
+
+        console.log(newCraft)
          
         // send data to server 
 
@@ -56,7 +62,7 @@ const AddCraft = () => {
                         </div>
                         <div>
                         <p className="text-start"> Processing Time </p>
-                        <input className="w-full border-2 px-4 py-2" type="text" placeholder="Processing Time" name=" processingTime" id="" />
+                        <input className="w-full border-2 px-4 py-2" type="text" placeholder="Processing Time" name="processingTime" id="" />
                         </div>
                         <div>
                         <p className="text-start">Stock Status </p>
@@ -64,7 +70,7 @@ const AddCraft = () => {
                         </div>
                         <div>
                         <p className="text-start">User Email </p>
-                        <input className="w-full border-2 px-4 py-2" type="text" placeholder="Email" name="email" id="" />
+                        <input className="w-full border-2 px-4 py-2" type="email" placeholder="Email" name="email" id="" />
                         </div>
                         <div>
                         <p className="text-start">User Name </p>
@@ -79,7 +85,7 @@ const AddCraft = () => {
                         </div>
                         
 
-                        <input className="w-full py-2 mb-6 bg-green-500 mt-5" type="submit" value="Add Craft Item" />
+                        <input className="w-full py-2 mb-6 font-bold text-white bg-green-500 mt-5" type="submit" value="Add Craft Item" />
 
                 </form>
             </div>
