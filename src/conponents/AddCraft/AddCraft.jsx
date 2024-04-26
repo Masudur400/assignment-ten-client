@@ -26,7 +26,7 @@ const AddCraft = () => {
 
     return (
         <div>
-            <div className="md:w-2/3 w-4/5 mx-auto shadow-lg bg-green-100  mt-5 md:mt-10 p-5 rounded-lg">
+            <div className="md:w-2/3 w-4/5 mx-auto shadow-lg bg-green-100 text-black mt-5 md:mt-10 p-5 rounded-lg">
                 <h3 className="text-lg font-bold text-center">Add Craft Item</h3>
                 <form onSubmit={handleAddCraft}>
                         <div className="grid md:grid-cols-2 gap-5 mt-5">
