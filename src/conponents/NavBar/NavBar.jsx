@@ -4,8 +4,11 @@ import { Link, NavLink } from "react-router-dom";
 const NavBar = () => {
     const links = <>
         <li> <NavLink to="/">Home</NavLink></li>
-        <li> <NavLink to="selectList">Select list</NavLink></li>
-        <li> <NavLink to="profile">ProFile</NavLink></li>
+        <li> <NavLink to="allCard">All Art & craft Items</NavLink></li>
+        <li> <NavLink to="addCraft">Add Craft Item</NavLink></li>
+        <li> <NavLink to="myCraftList">My Art&Craft List</NavLink></li>
+        <li> <NavLink to="contact">Contact</NavLink></li>
+        <li> <NavLink to="profile">Profile</NavLink></li>
     </>
 
     return (
