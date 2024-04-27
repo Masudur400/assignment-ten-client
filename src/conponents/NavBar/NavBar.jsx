@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useState  } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../providers/AuthProvider";
 
@@ -8,37 +8,39 @@ const NavBar = () => {
     const { user, logOut } = useContext(AuthContext);
      
     const [theme, setTheme] = useState('light')
+
+     
     
-    const handleTheme = (e) =>{
+    
+    const handleTheme = (e) =>{ 
+
         if(e.target.checked){
             setTheme('dark')
         }
         else{
             setTheme('light')
-        }
+        } 
+        
     }
-     
+
     useEffect(()=>{
         localStorage.setItem('theme', theme)
         const localTheme = localStorage.getItem('theme')
         document.querySelector('html').setAttribute('data-theme',localTheme)
     },[theme])
+     
 
 
     const handleLogOut = () => {
         logOut()
             .then()
             .catch()
-    }
-
-     
-     
-
+    } 
      
 
     const links = <>
         <li> <NavLink to="/">Home</NavLink></li>
-        <li> <NavLink to="allCard">All Art & craft Items</NavLink></li>
+        <li> <NavLink to="allCard">All Art & craft</NavLink></li>
         <li> <NavLink to="addCraft">Add Craft Item</NavLink></li>
         <li> <NavLink to="myCraftList">My Art&Craft List</NavLink></li>
         <li> <NavLink to="contact">Contact</NavLink></li>

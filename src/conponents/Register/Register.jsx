@@ -4,6 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../providers/AuthProvider";
 import Swal from "sweetalert2";
 import { Helmet } from "react-helmet";
+import 'animate.css';
 
 const Register = () => {
     const [showPassword, setShowPassword] = useState(false);

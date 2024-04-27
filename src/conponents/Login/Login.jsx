@@ -4,6 +4,7 @@ import { Link  } from "react-router-dom";
 import { AuthContext } from "../providers/AuthProvider";
 import Swal from "sweetalert2";
 import { Helmet } from "react-helmet";
+import 'animate.css';
 
 const Login = () => {
     const { login,googleLogin,githubLogin  } = useContext(AuthContext)
