@@ -1,7 +1,7 @@
  
 const MyCraftList = () => {
     return (
-        <div>
+        <div className="min-h-screen">
             My Craft List
         </div>
     );
