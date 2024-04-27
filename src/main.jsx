@@ -18,6 +18,7 @@ import Register from './conponents/Register/Register.jsx';
 import Login from './conponents/Login/Login.jsx';
 import AuthProvider from './conponents/providers/AuthProvider.jsx';
 import UpdateProfile from './conponents/UpdateProfile/UpdateProfile.jsx';
+import CardDetails from './conponents/CardDetails/CardDetails.jsx';
 
 const router = createBrowserRouter([
   {
@@ -30,36 +31,42 @@ const router = createBrowserRouter([
         element:<Home></Home>
       },
       {
-        path:'allCard',
-        element:<AllCardAndCrafe></AllCardAndCrafe>
+        path:'/allCard',
+        element:<AllCardAndCrafe></AllCardAndCrafe>,
+        loader:() => fetch('http://localhost:5000/craft')
       },
       {
-        path:'addCraft',
+        path:'/addCraft',
         element: <AddCraft></AddCraft>
       },
       {
-        path:'myCraftList',
+        path:'/myCraftList',
         element: <MyCraftList></MyCraftList>
       },
       {
-        path:'contact',
+        path:'/contact',
         element: <Contact></Contact>
       },
       {
-        path:'profile',
+        path:'/profile',
         element:<Profile></Profile>
       },
       {
-        path:'register',
+        path:'/register',
         element:<Register></Register>
       },
       {
-        path:'login',
+        path:'/login',
         element:<Login></Login>
       },
       {
-        path:'updateProfile',
+        path:'/updateProfile',
         element:<UpdateProfile></UpdateProfile>
+      },
+      {
+        path:'/craft/:id',
+        element:<CardDetails></CardDetails>,
+        loader:() => fetch('http://localhost:5000/craft')
       }
     ]
   },
