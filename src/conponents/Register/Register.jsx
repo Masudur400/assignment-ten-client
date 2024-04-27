@@ -11,7 +11,7 @@ const Register = () => {
     const [userSuccess, setUserSuccess] = useState('');
     const [passwordError, setPasswordError] = useState('');
 
-     const {createUser} = useContext(AuthContext)
+     const {createUser,updateUserProfile} = useContext(AuthContext)
     const navigate = useNavigate();
 
     const handleRegister = e => {
@@ -48,14 +48,14 @@ const Register = () => {
                         icon: "success"
                     });
                 }
-                // updateProfile(result.user, {
-                //     displayName: name,
-                //     photoURL: photo
-                // })
-                //     .then()
-                //     .catch(error => {
-                //         console.log(error)
-                //     })
+                updateUserProfile(result.user, {
+                    displayName: name,
+                    photoURL: photo
+                })
+                    .then()
+                    .catch(error => {
+                        console.log(error)
+                    })
                 setUserSuccess('user created successfully')
                 navigate('/')
             })

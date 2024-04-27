@@ -17,6 +17,7 @@ import Profile from './conponents/Profile/Profile.jsx';
 import Register from './conponents/Register/Register.jsx';
 import Login from './conponents/Login/Login.jsx';
 import AuthProvider from './conponents/providers/AuthProvider.jsx';
+import UpdateProfile from './conponents/UpdateProfile/UpdateProfile.jsx';
 
 const router = createBrowserRouter([
   {
@@ -55,6 +56,10 @@ const router = createBrowserRouter([
       {
         path:'login',
         element:<Login></Login>
+      },
+      {
+        path:'updateProfile',
+        element:<UpdateProfile></UpdateProfile>
       }
     ]
   },
