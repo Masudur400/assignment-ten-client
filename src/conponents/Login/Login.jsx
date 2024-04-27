@@ -6,7 +6,7 @@ import Swal from "sweetalert2";
 import { Helmet } from "react-helmet";
 
 const Login = () => {
-    const { login,googleLogin  } = useContext(AuthContext)
+    const { login,googleLogin,githubLogin  } = useContext(AuthContext)
 
     const [showPassword, setShowPassword] = useState(false);
 
@@ -51,14 +51,14 @@ const Login = () => {
     }
 
     const handleGithubLogin = () => {
-        // githubLogin()
-        //     .then(result => {
-        //         console.log(result)
-        //         navigate(location?.state ? location.state : '/')
-        //     })
-        //     .catch(error => {
-        //         console.log(error)
-        //     })
+        githubLogin()
+            .then(result => {
+                console.log(result)
+                // navigate(location?.state ? location.state : '/')
+            })
+            .catch(error => {
+                console.log(error)
+            })
     }
 
     return (
