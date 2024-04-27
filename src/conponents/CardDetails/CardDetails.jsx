@@ -23,7 +23,7 @@ const CardDetails = () => {
      
 
      
-    const { name, itemName, subcategoryName, shortDescription, price, rating, customization, processingTime, stockStatus, email, photo } = DetailsCard;
+    const {itemName, subcategoryName, shortDescription, price, rating, customization, processingTime, stockStatus, photo } = DetailsCard;
 
     return (
         <div className="min-h-screen md:p-20 p-5">

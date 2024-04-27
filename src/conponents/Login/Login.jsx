@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import { FaGithub, FaGoogle, FaRegEye, FaRegEyeSlash } from "react-icons/fa";
-import { Link  } from "react-router-dom";
+import { Link, useLocation, useNavigate  } from "react-router-dom";
 import { AuthContext } from "../providers/AuthProvider";
 import Swal from "sweetalert2";
 import { Helmet } from "react-helmet";
@@ -11,8 +11,8 @@ const Login = () => {
 
     const [showPassword, setShowPassword] = useState(false);
 
-    // const navigate = useNavigate()
-    // const location = useLocation();
+    const navigate = useNavigate()
+    const location = useLocation();
 
     const handleLogin = e => {
         e.preventDefault()
@@ -32,7 +32,7 @@ const Login = () => {
                     });
                 }
 
-                // navigate(location?.state ? location.state : '/')
+                navigate(location?.state ? location.state : '/')
             })
             .catch(error => {
                 console.error(error)
@@ -44,7 +44,14 @@ const Login = () => {
         googleLogin()
             .then(result => {
                 console.log(result)
-                // navigate(location?.state ? location.state : '/')
+                if (result.user) {
+                    Swal.fire({
+                        title: "Success!",
+                        text: "Login successfully!",
+                        icon: "success"
+                    });
+                }
+                navigate(location?.state ? location.state : '/')
             })
             .catch(error => {
                 console.log(error)
@@ -55,7 +62,14 @@ const Login = () => {
         githubLogin()
             .then(result => {
                 console.log(result)
-                // navigate(location?.state ? location.state : '/')
+                if (result.user) {
+                    Swal.fire({
+                        title: "Success!",
+                        text: "Login successfully!",
+                        icon: "success"
+                    });
+                }
+                navigate(location?.state ? location.state : '/')
             })
             .catch(error => {
                 console.log(error)

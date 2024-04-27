@@ -19,6 +19,7 @@ import Login from './conponents/Login/Login.jsx';
 import AuthProvider from './conponents/providers/AuthProvider.jsx';
 import UpdateProfile from './conponents/UpdateProfile/UpdateProfile.jsx';
 import CardDetails from './conponents/CardDetails/CardDetails.jsx';
+import PrivetRoute from './conponents/PrivetRoute/PrivetRoute.jsx';
 
 const router = createBrowserRouter([
   {
@@ -32,16 +33,22 @@ const router = createBrowserRouter([
       },
       {
         path:'/allCard',
-        element:<AllCardAndCrafe></AllCardAndCrafe>,
+        element:<PrivetRoute>
+          <AllCardAndCrafe></AllCardAndCrafe>
+        </PrivetRoute>,
         loader:() => fetch('http://localhost:5000/craft')
       },
       {
         path:'/addCraft',
-        element: <AddCraft></AddCraft>
+        element: <PrivetRoute>
+          <AddCraft></AddCraft>
+        </PrivetRoute>
       },
       {
         path:'/myCraftList',
-        element: <MyCraftList></MyCraftList>
+        element: <PrivetRoute>
+          <MyCraftList></MyCraftList>
+        </PrivetRoute>
       },
       {
         path:'/contact',
@@ -49,7 +56,9 @@ const router = createBrowserRouter([
       },
       {
         path:'/profile',
-        element:<Profile></Profile>
+        element:<PrivetRoute>
+          <Profile></Profile>
+        </PrivetRoute>
       },
       {
         path:'/register',
@@ -61,11 +70,15 @@ const router = createBrowserRouter([
       },
       {
         path:'/updateProfile',
-        element:<UpdateProfile></UpdateProfile>
+        element:<PrivetRoute>
+          <UpdateProfile></UpdateProfile>
+        </PrivetRoute>
       },
       {
         path:'/craft/:id',
-        element:<CardDetails></CardDetails>,
+        element:<PrivetRoute>
+          <CardDetails></CardDetails>
+        </PrivetRoute>,
         loader:() => fetch('http://localhost:5000/craft')
       }
     ]
