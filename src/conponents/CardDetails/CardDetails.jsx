@@ -26,7 +26,7 @@ const CardDetails = () => {
     const {itemName,itemType, subcategoryName, shortDescription, price, rating, customization, processingTime, stockStatus, photo } = DetailsCard;
 
     return (
-        <div className="min-h-screen md:p-20 p-5">
+        <div data-aos="fade-up-left" className="min-h-screen md:p-20 p-5">
            <div className="lg:flex md:mt-10 mt-5 gap-10 shadow-2xl rounded-md p-10">
             <div className="flex justify-center items-center">
                 <img className="lg:w-[500px] w-[400px] h-[150px] lg:h-[300px] border" src={photo} alt="" />
