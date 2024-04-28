@@ -2,9 +2,9 @@ import { useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
 
  
-const CardDetails = () => {
+const MyCardDetails = () => {
 
-    const [ DetailsCard, setDetailsCard] = useState({});
+    const [ myDetailsCard, setMyDetailsCard] = useState({});
 
     const details = useLoaderData();
     const {id} = useParams(); 
@@ -14,7 +14,7 @@ const CardDetails = () => {
         const fetchData = async () => {
           const aCard =await details.find(card => card._id == id);
           console.log('details card', aCard);
-          setDetailsCard(aCard);
+          setMyDetailsCard(aCard);
         };
       
         fetchData();
@@ -23,7 +23,7 @@ const CardDetails = () => {
      
 
      
-    const {itemName, subcategoryName, shortDescription, price, rating, customization, processingTime, stockStatus, photo } = DetailsCard;
+    const { name, itemName, subcategoryName, shortDescription, price, rating, customization, processingTime, stockStatus, email, photo } = myDetailsCard;
 
     return (
         <div className="min-h-screen md:p-20 p-5">
@@ -44,10 +44,14 @@ const CardDetails = () => {
                     <p className="font-bold">Stock Status: {stockStatus}</p>
                     <p className="font-bold">Customization: {customization}</p>
                 </div>
+                <div className="md:flex my-5 justify-between items-center">
+                <p className="font-bold">Name: {name}</p>
+                <p className="font-bold">Email: {email}</p>
+                </div>
             </div>
             </div> 
         </div>
     );
 };
 
-export default CardDetails;
+export default MyCardDetails;
