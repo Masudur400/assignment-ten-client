@@ -22,10 +22,10 @@ const MyCraftList = () => {
         <div>
             <div className="my-5 flex justify-center items-center">
                 <details className="dropdown">
-                    <summary className="m-1 btn font-bold flex gap-2 justify-center items-center">Item Types <FaChevronDown></FaChevronDown></summary>
-                    <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
-                        <li className="font-bold mb-3"> Craft </li>
-                        <li className="font-bold mb-3"> Art </li>
+                    <summary className="m-1 btn font-bold flex gap-2 justify-center items-center">Customization <FaChevronDown></FaChevronDown></summary>
+                    <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box  w-32">
+                        <li className="font-bold mb-3 text-center"> Yes </li>
+                        <li className="font-bold mb-3 text-center"> No </li>
                     </ul>
                 </details>
             </div>
