@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const SingleCraftCard = ({craft}) => {
 
-    const { _id,  itemName, subcategoryName,  price, rating, customization, processingTime,   photo } = craft; 
+    const { _id,itemType,  itemName, subcategoryName,  price, rating, customization, processingTime,   photo } = craft; 
 
     return (
         <div className='border p-5 flex flex-col shadow-lg rounded-md'>
@@ -20,7 +20,8 @@ const SingleCraftCard = ({craft}) => {
                 <p className='font-bold flex gap-2'>Rating : <span className='text-yellow-700 text-xl'>{rating}</span></p>
              </div>
              <div className='my-5  '>
-                <p className='font-bold mb-3'>Processing Time : {processingTime}</p>
+                <p className='font-bold mb-3'>Item Type : {itemType}</p>
+                <p className='font-bold mb-3'>Processing Time : {processingTime} days</p>
                 <p className='font-bold flex gap-2'>Customization : <span className='text-red-500'>{customization}</span></p>
              </div>
 

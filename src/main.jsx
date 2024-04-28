@@ -11,8 +11,7 @@ import Home from './conponents/Home/Home.jsx';
 import ErrorPage from './conponents/ErrorPage/ErrorPage.jsx';
 import AllCardAndCrafe from './conponents/AllCardAndCrafe/AllCardAndCrafe.jsx';
 import AddCraft from './conponents/AddCraft/AddCraft.jsx';
-import MyCraftList from './conponents/MyCraftList/MyCraftList.jsx';
-import Contact from './conponents/Contact/Contact.jsx';
+import MyCraftList from './conponents/MyCraftList/MyCraftList.jsx'; 
 import Profile from './conponents/Profile/Profile.jsx';
 import Register from './conponents/Register/Register.jsx';
 import Login from './conponents/Login/Login.jsx';
@@ -51,11 +50,7 @@ const router = createBrowserRouter([
         element: <PrivetRoute>
           <MyCraftList></MyCraftList>
         </PrivetRoute>
-      },
-      {
-        path:'/contact',
-        element: <Contact></Contact>
-      },
+      }, 
       {
         path:'/profile',
         element:<PrivetRoute>

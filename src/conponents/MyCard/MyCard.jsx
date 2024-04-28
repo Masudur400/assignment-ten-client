@@ -1,10 +1,10 @@
 
 import PropTypes from 'prop-types';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link} from 'react-router-dom';
 import Swal from 'sweetalert2';
 
 
-const MyCard = ({ item, crafts, setCrafts }) => {
+const MyCard = ({ item}) => {
 
     
 
@@ -33,10 +33,7 @@ const MyCard = ({ item, crafts, setCrafts }) => {
                                 title: "Deleted!",
                                 text: "Your craft has been deleted.",
                                 icon: "success" 
-                              });
-                               
-                              const remaining = crafts.filter(crf => crf._id !== _id)
-                              setCrafts(remaining)
+                              }); 
                         }
                     })
             }
@@ -44,7 +41,7 @@ const MyCard = ({ item, crafts, setCrafts }) => {
 
     }
 
-    const { _id, itemName, subcategoryName, price, rating, customization, processingTime, photo } = item;
+    const { _id,itemType, itemName, subcategoryName, price, rating, customization, processingTime, photo } = item;
 
     return (
         <div className='border p-5 flex flex-col shadow-lg rounded-md'>
@@ -59,8 +56,9 @@ const MyCard = ({ item, crafts, setCrafts }) => {
                     <p className='font-bold flex gap-2'>Rating : <span className='text-yellow-700 text-xl'>{rating}</span></p>
                 </div>
                 <div className='my-5  '>
-                    <p className='font-bold mb-3'>Processing Time : {processingTime}</p>
+                    <p className='font-bold mb-3'>Processing Time : {processingTime} days</p>
                     <p className='font-bold flex gap-2'>Customization : <span className='text-red-500'>{customization}</span></p>
+                    <p className='font-bold mb-3'>Item Type : {itemType}</p>
                 </div>
 
             </div>

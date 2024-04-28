@@ -2,18 +2,20 @@
 import { useContext } from "react";
 import Swal from "sweetalert2";
 import { AuthContext } from "../providers/AuthProvider";
+import { useNavigate } from "react-router-dom";
 
 
 const AddCraft = () => {
 
     const { user } = useContext(AuthContext);
+    const navigate = useNavigate()
 
 
 
     const handleAddCraft = e => {
         e.preventDefault()
         const form = e.target
-        const name = form.name.value
+        const name = user.name
         const itemName = form.itemName.value
         const subcategoryName = form.subcategoryName.value
         const shortDescription = form.shortDescription.value
@@ -48,6 +50,7 @@ const AddCraft = () => {
                         text: "Added craft successfully!",
                         icon: "success"
                     });
+                    navigate('/myCraftList')
                 }
             })
 
@@ -113,7 +116,7 @@ const AddCraft = () => {
                         </div>
                         <div>
                             <p className="text-start">User Name </p>
-                            <input className="w-full border-2 px-4 py-3 rounded-lg" type="text" placeholder="User Name" name="name" id="" />
+                            <input className="w-full border-2 px-4 py-3 rounded-lg" type="text" placeholder="User Name" defaultValue={user?.displayName} name="name" id="" />
                         </div>
 
                         <div>

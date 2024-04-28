@@ -7,48 +7,51 @@ const NavBar = () => {
 
     const { user, logOut } = useContext(AuthContext);
 
-    // const [theme, setTheme] = useState('light')
-    const [mode, setMode] = useState('light')
+    const [theme, setTheme] = useState('light')
+    // const [mode, setMode] = useState('light')
+     
 
 
 
 
     const handleTheme = (e) => {
+         
 
-        // if(e.target.checked){
-        //     setTheme('dark')
-        // }
-        // else{
-        //     setTheme('light')
-        // } 
-
-        const html = document.documentElement;
-
-        if (mode === "light") {
-            html.classList.remove("light");
-            html.classList.add("dark");
-            setMode("dark");
-            localStorage.setItem("mode", "dark");
-        } else {
-            html.classList.remove("dark");
-            html.classList.add("light");
-            setMode("light");
-            localStorage.setItem("mode", "light");
+        if(e.target.checked){
+            setTheme('dark') 
         }
+        else{
+            setTheme('light')
+        } 
+
+        // const html = document.documentElement;
+
+        // if (mode === "light") {
+        //     html.classList.remove("light");
+        //     html.classList.add("dark");
+        //     setMode("dark");
+        //     localStorage.setItem("mode", "dark");
+        // } else {
+        //     html.classList.remove("dark");
+        //     html.classList.add("light");
+        //     setMode("light");
+        //     localStorage.setItem("mode", "light");
+        // }
 
     }
 
-    useEffect(() => {
-    const currentMode = localStorage.getItem("mode") || "light";
-    document.documentElement.classList.add(currentMode); 
-    setMode(currentMode);
-  }, []);
+//     useEffect(() => {
+//     const currentMode = localStorage.getItem("mode") || "light";
+//     document.documentElement.classList.add(currentMode); 
+//     setMode(currentMode);
+//   }, []);
 
-    // useEffect(()=>{
-    //     localStorage.setItem('theme', theme)
-    //     const localTheme = localStorage.getItem('theme')
-    //     document.querySelector('html').setAttribute('data-theme',localTheme)
-    // },[theme])
+    useEffect(()=>{
+        localStorage.setItem('theme', theme) 
+        const localTheme = localStorage.getItem('theme')
+        document.querySelector('html').setAttribute('data-theme',localTheme)
+         
+    },[theme])
 
 
 
@@ -63,8 +66,7 @@ const NavBar = () => {
         <li> <NavLink to="/">Home</NavLink></li>
         <li> <NavLink to="allCard">All Art & craft</NavLink></li>
         <li> <NavLink to="addCraft">Add Craft Item</NavLink></li>
-        <li> <NavLink to="myCraftList">My Art&Craft List</NavLink></li>
-        <li> <NavLink to="contact">Contact</NavLink></li>
+        <li> <NavLink to="myCraftList">My Art&Craft List</NavLink></li> 
         <li> <NavLink to="profile">Profile</NavLink></li>
     </>
 

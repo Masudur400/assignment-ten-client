@@ -6,10 +6,9 @@ import MyCard from "../MyCard/MyCard";
 const MyCraftList = () => {
 
     const{user} = useContext(AuthContext)
-    const [items, setItems] = useState([])
-    const [crafts, setCrafts] = useState(items)
+    const [items, setItems] = useState([]) 
 
- 
+  
     useEffect(()=>{
         fetch(`http://localhost:5000/myCraft/${user?.email}`)
         .then(res => res.json())
@@ -22,9 +21,7 @@ const MyCraftList = () => {
              {
                 items.map(item => <MyCard 
                     key={item._id}
-                     item = {item}
-                     crafts={crafts}
-                     setCrafts={setCrafts}
+                     item = {item} 
                      ></MyCard>)
              }
         </div>

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useLoaderData, useParams } from "react-router-dom";
+import { Link, useLoaderData, useParams } from "react-router-dom";
 
  
 const CardDetails = () => {
@@ -23,7 +23,7 @@ const CardDetails = () => {
      
 
      
-    const {itemName, subcategoryName, shortDescription, price, rating, customization, processingTime, stockStatus, photo } = DetailsCard;
+    const {itemName,itemType, subcategoryName, shortDescription, price, rating, customization, processingTime, stockStatus, photo } = DetailsCard;
 
     return (
         <div className="min-h-screen md:p-20 p-5">
@@ -40,9 +40,13 @@ const CardDetails = () => {
                     <p className="font-bold">Rating: {rating}</p>
                 </div>
                 <div className="md:flex my-5 justify-between items-center">
-                    <p className="font-bold">Processing Time: {processingTime}</p>
+                    <p className="font-bold">Processing Time: {processingTime} days</p>
                     <p className="font-bold">Stock Status: {stockStatus}</p>
                     <p className="font-bold">Customization: {customization}</p>
+                </div>
+                <div className="flex justify-between">
+                <p className="font-bold">Item Type: {itemType}</p>
+                <Link to="/allCard"><button className="bg-green-500 text-white font-bold rounded-md px-4 py-2">Back</button></Link>
                 </div>
             </div>
             </div> 
