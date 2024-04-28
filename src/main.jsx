@@ -49,7 +49,8 @@ const router = createBrowserRouter([
         path:'/myCraftList',
         element: <PrivetRoute>
           <MyCraftList></MyCraftList>
-        </PrivetRoute>
+        </PrivetRoute>,
+        loader:()=> fetch("http://localhost:5000/craft")
       }, 
       {
         path:'/profile',
@@ -91,7 +92,7 @@ const router = createBrowserRouter([
           <UpdateCard></UpdateCard>
         </PrivetRoute>,
         loader:({params})=>fetch(`http://localhost:5000/craft/${params.id}`)
-      },
+      } 
        
     ]
   },

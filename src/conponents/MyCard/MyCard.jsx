@@ -57,7 +57,7 @@ const MyCard = ({ item}) => {
                 </div>
                 <div className='my-5  '>
                     <p className='font-bold mb-3'>Processing Time : {processingTime} days</p>
-                    <p className='font-bold flex gap-2'>Customization : <span className='text-red-500'>{customization}</span></p>
+                    <p className='font-bold flex gap-2'>Customization : <span className='text-red-500 uppercase'>{customization}</span></p>
                     <p className='font-bold mb-3'>Item Type : {itemType}</p>
                 </div>
 

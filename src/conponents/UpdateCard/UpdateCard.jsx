@@ -93,8 +93,8 @@ const UpdateCard = () => {
                             <p className="text-start">Customization </p>
                             <select className="select   w-full  " name='customization' defaultValue={customization}>
                                 <option disabled selected>select item type</option>
-                                <option>Yes</option>
-                                <option>No</option>
+                                <option>yes</option>
+                                <option>no</option>
                             </select>
                         </div>
                         <div>

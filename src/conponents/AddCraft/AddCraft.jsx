@@ -92,8 +92,8 @@ const AddCraft = () => {
                             <p className="text-start">Customization </p>
                             <select className="select   w-full  " name="customization">
                                 <option disabled selected>Customization</option>
-                                <option>No</option>
-                                <option>Yes</option>
+                                <option>no</option>
+                                <option>yes</option>
                             </select>
                             {/* <input className="w-full border-2 px-4 py-2" type="text" placeholder="Customization" name="customization" id="" /> */}
                         </div>
