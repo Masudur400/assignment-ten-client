@@ -12,7 +12,7 @@ const CraftItemsSection = () => {
         .then(data => setItems(data))
     },[])
     const sliceItem = items.slice(0,6)
-    console.log(sliceItem)
+     
 
 
     return (
