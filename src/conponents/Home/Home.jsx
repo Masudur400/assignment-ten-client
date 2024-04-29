@@ -22,6 +22,7 @@ const Home = () => {
                 <Link to='/categoriesSection'><button className="btn">landscape</button></Link>
                 <Link to='/portrait'><button className="btn">portrait</button></Link>
                 <Link to='/WaterColour'><button className="btn">portrait</button></Link>
+                <Link to='/oilPainting'><button className="btn">oilPainting</button></Link>
             </div>
 
             <div className="mt-5 md:mt-10">

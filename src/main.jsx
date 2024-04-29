@@ -24,6 +24,7 @@ import UpdateCard from './conponents/UpdateCard/UpdateCard.jsx';
 import LandScape from './conponents/LandScape/LandScape.jsx';
 import PortraitDrawing from './conponents/PortraitDrawing/PortraitDrawing.jsx';
 import WatercolourPainting from './conponents/WatercolourPainting/WatercolourPainting.jsx';
+import OilPainting from './conponents/OilPainting/OilPainting.jsx';
 
 const router = createBrowserRouter([
   {
@@ -107,6 +108,10 @@ const router = createBrowserRouter([
       {
         path:'/WaterColour',
         element:<WatercolourPainting></WatercolourPainting>
+      },
+      {
+        path:'/oilPainting',
+        element:<OilPainting></OilPainting>
       }
 
        
