@@ -101,27 +101,39 @@ const router = createBrowserRouter([
       } ,
       {
         path:'/categoriesSection', 
-        element:  <LandScape></LandScape>
+        element:  <PrivetRoute>
+          <LandScape></LandScape>
+          </PrivetRoute>
       },
       {
         path:'/portrait',
-        element:<PortraitDrawing></PortraitDrawing>
+        element:<PrivetRoute>
+          <PortraitDrawing></PortraitDrawing>
+          </PrivetRoute>
       },
       {
         path:'/WaterColour',
-        element:<WatercolourPainting></WatercolourPainting>
+        element:<PrivetRoute>
+          <WatercolourPainting></WatercolourPainting>
+          </PrivetRoute>
       },
       {
         path:'/oilPainting',
-        element:<OilPainting></OilPainting>
+        element:<PrivetRoute>
+          <OilPainting></OilPainting>
+          </PrivetRoute>
       },
       {
         path:'/charcoalSketching',
-        element:<CharcoalSketching></CharcoalSketching>
+        element:<PrivetRoute>
+          <CharcoalSketching></CharcoalSketching>
+          </PrivetRoute>
       },
       {
         path:'/cartoonDrawing',
-        element:<CartoonDrawing></CartoonDrawing>
+        element:<PrivetRoute>
+          <CartoonDrawing></CartoonDrawing>
+          </PrivetRoute>
       }
 
        

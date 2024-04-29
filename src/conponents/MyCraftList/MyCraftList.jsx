@@ -15,13 +15,7 @@ const MyCraftList = () => {
 
 
 
-    useEffect(() => {
-        // fetch(`http://localhost:5000/myCraft/${user?.email}`)
-        //     .then(res => res.json())
-        //     .then(data => {
-        //         setItems(data)
-        //     })
-
+    useEffect(() => { 
         
         const myItems = allItems.filter(item => item.email === user.email)
         setMyItems(myItems); 
