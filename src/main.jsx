@@ -23,6 +23,7 @@ import MyCardDetails from './conponents/MyCard/MyCardDetails.jsx';
 import UpdateCard from './conponents/UpdateCard/UpdateCard.jsx';  
 import LandScape from './conponents/LandScape/LandScape.jsx';
 import PortraitDrawing from './conponents/PortraitDrawing/PortraitDrawing.jsx';
+import WatercolourPainting from './conponents/WatercolourPainting/WatercolourPainting.jsx';
 
 const router = createBrowserRouter([
   {
@@ -100,9 +101,14 @@ const router = createBrowserRouter([
         element:  <LandScape></LandScape>
       },
       {
-        path:'portrait',
+        path:'/portrait',
         element:<PortraitDrawing></PortraitDrawing>
+      },
+      {
+        path:'/WaterColour',
+        element:<WatercolourPainting></WatercolourPainting>
       }
+
        
     ]
   },
