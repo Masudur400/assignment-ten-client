@@ -25,6 +25,8 @@ import LandScape from './conponents/LandScape/LandScape.jsx';
 import PortraitDrawing from './conponents/PortraitDrawing/PortraitDrawing.jsx';
 import WatercolourPainting from './conponents/WatercolourPainting/WatercolourPainting.jsx';
 import OilPainting from './conponents/OilPainting/OilPainting.jsx';
+import CharcoalSketching from './conponents/CharcoalSketching/CharcoalSketching.jsx';
+import CartoonDrawing from './conponents/CartoonDrawing/CartoonDrawing.jsx';
 
 const router = createBrowserRouter([
   {
@@ -112,6 +114,14 @@ const router = createBrowserRouter([
       {
         path:'/oilPainting',
         element:<OilPainting></OilPainting>
+      },
+      {
+        path:'/charcoalSketching',
+        element:<CharcoalSketching></CharcoalSketching>
+      },
+      {
+        path:'/cartoonDrawing',
+        element:<CartoonDrawing></CartoonDrawing>
       }
 
        

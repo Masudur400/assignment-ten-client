@@ -11,7 +11,7 @@ const SingleCraftCard = ({ craft }) => {
 
         <div>
             <div className="overflow-x-auto">
-                <table className="table">
+                <table className="table mb-5 border-b-2">
                      
                     <thead>
                         <tr>

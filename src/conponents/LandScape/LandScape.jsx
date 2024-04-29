@@ -19,7 +19,7 @@ const LandScape = () => {
      
 
     useEffect(()=>{
-        const landscapePainting = allDataPro.filter(item => item.subcategoryName == 'Landscape Painting');
+        const landscapePainting = allDataPro.filter(item => item.subcategoryName.toLowerCase() === 'landscape painting');
             setAllData(landscapePainting);
     },[allDataPro])
 
