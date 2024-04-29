@@ -3,6 +3,7 @@ import { AuthContext } from "../providers/AuthProvider";
 import MyCard from "../MyCard/MyCard";
 import { FaChevronDown } from "react-icons/fa";
 import { useLoaderData } from "react-router-dom"; 
+import { Helmet } from "react-helmet";
 
 
 const MyCraftList = () => {
@@ -37,6 +38,9 @@ const MyCraftList = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>My Card & Craft List</title>
+            </Helmet>
             <div className="my-5 flex justify-center items-center">
                 <details className="dropdown">
                     <summary className="m-1 btn font-bold flex gap-2 justify-center items-center">Customization <FaChevronDown></FaChevronDown></summary>

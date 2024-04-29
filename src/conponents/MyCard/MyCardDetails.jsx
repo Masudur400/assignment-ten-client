@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { Link, useLoaderData, useParams } from "react-router-dom";
 import { AuthContext } from "../providers/AuthProvider";
+import { Helmet } from "react-helmet";
 
  
 const MyCardDetails = () => {
@@ -28,6 +29,9 @@ const MyCardDetails = () => {
 
     return (
         <div data-aos="fade-up-left" className="min-h-screen md:p-20 p-5">
+            <Helmet>
+                <title>My Card Details</title>
+            </Helmet>
            <div className="lg:flex md:mt-10 mt-5 gap-10 shadow-2xl rounded-md p-10">
             <div className="flex justify-center items-center">
                 <img className="lg:w-[500px] w-[400px] h-[150px] lg:h-[300px] border" src={photo} alt="" />

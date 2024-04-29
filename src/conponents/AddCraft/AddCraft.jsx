@@ -3,6 +3,7 @@ import { useContext } from "react";
 import Swal from "sweetalert2";
 import { AuthContext } from "../providers/AuthProvider";
 import { useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 
 const AddCraft = () => {
@@ -58,6 +59,9 @@ const AddCraft = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>Add Card & Craft</title>
+            </Helmet>
             <div data-aos="flip-left" className="md:w-2/3 w-4/5 mx-auto shadow-lg bg-green-100 text-black mt-5 md:mt-10 p-5 rounded-lg">
                 <h3 className="text-lg font-bold text-center">Add Craft Item</h3>
                 <form onSubmit={handleAddCraft}>

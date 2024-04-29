@@ -1,5 +1,6 @@
 
 import PropTypes from 'prop-types';
+import { Helmet } from 'react-helmet';
 import { Link} from 'react-router-dom';
 import Swal from 'sweetalert2';
 
@@ -44,7 +45,11 @@ const MyCard = ({ item}) => {
     const { _id,itemType, itemName, subcategoryName, price, rating, customization, processingTime, photo } = item;
 
     return (
+        
         <div data-aos="zoom-in" className='border p-5 flex flex-col shadow-lg rounded-md'>
+            <Helmet>
+                <title>My Card</title>
+            </Helmet>
             <div className='flex justify-center items-center'>
                 <img className='w-72 h-48 rounded-md border mb-5' src={photo} alt="" />
             </div>

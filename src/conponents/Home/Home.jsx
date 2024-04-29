@@ -10,12 +10,16 @@ import p3 from '../../assets/images/Charcoal Sketching.jfif';
 import p4 from '../../assets/images/Cartoon Drawing.jfif';
 import p5 from '../../assets/images/Watercolour Painting.jpg';
 import p6 from '../../assets/images/Portrait Drawing.jfif';
+import { Helmet } from "react-helmet";
 
 
 
 const Home = () => {
     return (
         <div>
+            <Helmet>
+                <title>Home</title>
+            </Helmet>
             <div className="mt-5 md:mt-10">
                 <Header></Header>
             </div>
