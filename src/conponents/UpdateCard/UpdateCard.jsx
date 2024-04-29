@@ -29,10 +29,9 @@ const UpdateCard = () => {
         const photo = form.photo.value
         const email= user.email
 
-        const updateCoffee = {  email,itemName, subcategoryName, shortDescription, price, rating, customization, processingTime, stockStatus,   photo }
+        const updateCraft = {  email,itemName, subcategoryName, shortDescription, price, rating, customization, processingTime, stockStatus,   photo }
 
-        console.log(updateCoffee)
-
+        
         // update data to server 
 
         fetch(`http://localhost:5000/craft/${_id}`, {
@@ -40,7 +39,7 @@ const UpdateCard = () => {
                 headers:{
                     'content-type' : 'application/json'
                 },
-                body:JSON.stringify(updateCoffee)
+                body:JSON.stringify(updateCraft)
         })
             .then(res => res.json())
             .then(data => {

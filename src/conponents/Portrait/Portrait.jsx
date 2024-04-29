@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
+
 import PropTypes from  'prop-types';
 
  
-const LandscapePanting = ({item}) => {
+const Portrait = ({item}) => {
     const { _id,itemType, itemName, subcategoryName, price, rating, customization, processingTime, photo } = item;
 
     return (
@@ -37,8 +38,8 @@ const LandscapePanting = ({item}) => {
     );
 };
 
-LandscapePanting.propTypes ={
+Portrait.propTypes ={
     item:PropTypes.object
 }
 
-export default LandscapePanting;
+export default Portrait;

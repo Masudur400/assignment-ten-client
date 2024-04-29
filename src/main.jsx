@@ -22,6 +22,7 @@ import PrivetRoute from './conponents/PrivetRoute/PrivetRoute.jsx';
 import MyCardDetails from './conponents/MyCard/MyCardDetails.jsx';
 import UpdateCard from './conponents/UpdateCard/UpdateCard.jsx';  
 import LandScape from './conponents/LandScape/LandScape.jsx';
+import PortraitDrawing from './conponents/PortraitDrawing/PortraitDrawing.jsx';
 
 const router = createBrowserRouter([
   {
@@ -97,6 +98,10 @@ const router = createBrowserRouter([
       {
         path:'/categoriesSection', 
         element:  <LandScape></LandScape>
+      },
+      {
+        path:'portrait',
+        element:<PortraitDrawing></PortraitDrawing>
       }
        
     ]
