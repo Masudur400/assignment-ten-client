@@ -20,7 +20,8 @@ import UpdateProfile from './conponents/UpdateProfile/UpdateProfile.jsx';
 import CardDetails from './conponents/CardDetails/CardDetails.jsx';
 import PrivetRoute from './conponents/PrivetRoute/PrivetRoute.jsx';
 import MyCardDetails from './conponents/MyCard/MyCardDetails.jsx';
-import UpdateCard from './conponents/UpdateCard/UpdateCard.jsx'; 
+import UpdateCard from './conponents/UpdateCard/UpdateCard.jsx';  
+import LandScape from './conponents/LandScape/LandScape.jsx';
 
 const router = createBrowserRouter([
   {
@@ -92,7 +93,11 @@ const router = createBrowserRouter([
           <UpdateCard></UpdateCard>
         </PrivetRoute>,
         loader:({params})=>fetch(`http://localhost:5000/craft/${params.id}`)
-      } 
+      } ,
+      {
+        path:'/categoriesSection', 
+        element:  <LandScape></LandScape>
+      }
        
     ]
   },
