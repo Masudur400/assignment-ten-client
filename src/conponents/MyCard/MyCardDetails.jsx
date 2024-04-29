@@ -14,8 +14,7 @@ const MyCardDetails = () => {
      
     useEffect(() => {
         const fetchData = async () => {
-          const aCard =await details.find(card => card._id == id);
-          console.log('details card', aCard);
+          const aCard =await details.find(card => card._id == id); 
           setMyDetailsCard(aCard);
         };
       

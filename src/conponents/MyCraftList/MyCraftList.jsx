@@ -39,7 +39,7 @@ const MyCraftList = () => {
             setItems(noItem);
         }
      }
-     console.log(items)
+      
 
     return (
         <div>

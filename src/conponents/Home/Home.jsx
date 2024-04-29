@@ -24,10 +24,10 @@ const Home = () => {
                 <CraftItemsSection></CraftItemsSection>
             </div>
 
-            <div>
+            <div className="mt-14">
                 <h3 className="text-2xl font-extrabold text-center my-9">Art & Craft Categories</h3>
                 <p className="md:w-1/3 mx-auto my-7 text-justify">Painting involves applying pigment to a surface, typically canvas, paper, or wood, to create images or express ideas. It encompasses various painting mediums such as oil, acrylic, watercolor, gouache, and encaustic, each with its own unique characteristics and techniques.</p>
-                <div className="mt-5 md:mt-10 grid md:grid-cols-2 lg:grid-cols-3 gap-8 px-5">
+                <div className="mt-5 md:mt-10 grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:px-5">
                     <div className="p-5 shadow-md rounded-md">
                         <div className="flex justify-center items-center">
                             <img className="w-[300px] h-[200px] border" src={p1} alt="" />
@@ -52,7 +52,7 @@ const Home = () => {
                         </div>
                         <h2 className="text-2xl font-bold text-center my-5">WaterColour Categories</h2>
                         <p className="mb-4 text-justify">Watercolor paint consists of pigments suspended in a water-soluble binder, usually gum arabic. Unlike oil or acrylic paint, watercolor paint remains translucent, allowing light to pass through the layers and giving the painting a luminous quality. </p>
-                        <Link to='/WaterColour'><button className="bg-green-500 font-bold px-4 py-2 rounded-md w-full text-white">WaterColour</button></Link>
+                        <Link to='/WaterColour'><button className="bg-green-500 font-bold px-4 py-2 rounded-md w-full text-white">Show all</button></Link>
                     </div>
 
                     <div className="p-5 shadow-md rounded-md">
