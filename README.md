@@ -16,7 +16,7 @@
 
 # Server Link
 
-- client server Link : 
+- client server Link : https://assignment-ten-354f8.web.app/
 
 
-- server site Link :
+- server site Link : https://painting-and-drawing-server-nu.vercel.app/craft
