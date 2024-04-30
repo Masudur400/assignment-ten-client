@@ -47,9 +47,12 @@ const CardDetails = () => {
                     <p className="font-bold">Stock Status: {stockStatus}</p>
                     <p className="font-bold">Customization: {customization}</p>
                 </div>
-                <div className="flex justify-between">
+                <div className=" ">
                 <p className="font-bold">Item Type: {itemType}</p>
+                <div className="flex gap-7 mt-4">
+                    <Link to="/"><button className="bg-green-500 text-white font-bold rounded-md px-4 py-2">Home</button></Link>
                 <Link to="/allCard"><button className="bg-green-500 text-white font-bold rounded-md px-4 py-2">Back</button></Link>
+                </div>
                 </div>
             </div>
             </div> 

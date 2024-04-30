@@ -43,7 +43,7 @@ const router = createBrowserRouter([
         element:<PrivetRoute>
           <AllCardAndCrafe></AllCardAndCrafe>
         </PrivetRoute>,
-        loader:() => fetch('http://localhost:5000/craft')
+        loader:() => fetch('https://painting-and-drawing-server-nu.vercel.app/craft')
       },
       {
         path:'/addCraft',
@@ -56,7 +56,7 @@ const router = createBrowserRouter([
         element: <PrivetRoute>
           <MyCraftList></MyCraftList>
         </PrivetRoute>,
-        loader:()=> fetch("http://localhost:5000/craft")
+        loader:()=> fetch("https://painting-and-drawing-server-nu.vercel.app/craft")
       }, 
       {
         path:'/profile',
@@ -83,21 +83,21 @@ const router = createBrowserRouter([
         element:<PrivetRoute>
           <CardDetails></CardDetails>
         </PrivetRoute>,
-        loader:() => fetch('http://localhost:5000/craft')
+        loader:() => fetch('https://painting-and-drawing-server-nu.vercel.app/craft')
       },
       {
         path:'/myCard/:id',
         element:<PrivetRoute>
           <MyCardDetails></MyCardDetails>
         </PrivetRoute>,
-        loader:() => fetch('http://localhost:5000/craft')
+        loader:() => fetch('https://painting-and-drawing-server-nu.vercel.app/craft')
       },
       {
         path:'/updateCard/:id',
         element:<PrivetRoute>
           <UpdateCard></UpdateCard>
         </PrivetRoute>,
-        loader:({params})=>fetch(`http://localhost:5000/craft/${params.id}`)
+        loader:({params})=>fetch(`https://painting-and-drawing-server-nu.vercel.app/craft/${params.id}`)
       } ,
       {
         path:'/categoriesSection', 

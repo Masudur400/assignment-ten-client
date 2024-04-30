@@ -5,6 +5,7 @@ import { AuthContext } from "../providers/AuthProvider";
 import Swal from "sweetalert2";
 import { Helmet } from "react-helmet";
 import 'animate.css';
+import { updateProfile } from "firebase/auth";
 
 const Register = () => {
     const [showPassword, setShowPassword] = useState(false);
@@ -12,7 +13,7 @@ const Register = () => {
     const [userSuccess, setUserSuccess] = useState('');
     const [passwordError, setPasswordError] = useState('');
 
-     const {createUser,updateUserProfile} = useContext(AuthContext)
+     const {createUser} = useContext(AuthContext)
     const navigate = useNavigate();
 
     const handleRegister = e => {
@@ -49,14 +50,15 @@ const Register = () => {
                         icon: "success"
                     });
                 }
-                updateUserProfile(result.user, {
+                updateProfile(result.user, {
                     displayName: name,
                     photoURL: photo
                 })
-                    .then()
-                    .catch(error => {
-                        console.log(error)
-                    })
+                .then()
+                .catch(error =>{
+                    console.log(error)
+                })
+                
                 setUserSuccess('user created successfully')
                 navigate('/')
             })
@@ -67,6 +69,8 @@ const Register = () => {
             })
 
     }
+
+     
 
     return (
         <div className="min-h-screen">

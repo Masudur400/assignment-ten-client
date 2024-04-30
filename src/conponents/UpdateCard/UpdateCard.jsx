@@ -35,7 +35,7 @@ const UpdateCard = () => {
         
         // update data to server 
 
-        fetch(`http://localhost:5000/craft/${_id}`, {
+        fetch(`https://painting-and-drawing-server-nu.vercel.app/craft/${_id}`, {
                 method:'PUT',
                 headers:{
                     'content-type' : 'application/json'

@@ -46,13 +46,7 @@ const AuthProvider = ({ children }) => {
         return signOut(auth)
     }
 
-    const updateUserProfile = (name, photo) => {
-        setLoading(true);
-        return updateProfile(user, {
-            displayName: name,
-            photoURL: photo
-        },setLoading(false))
-    }
+    
 
     useEffect(() => {
         const unSubscribe = onAuthStateChanged(auth, currentUser => {
@@ -72,7 +66,7 @@ const AuthProvider = ({ children }) => {
         login,
         googleLogin,
         logOut,
-        updateUserProfile,
+         
         githubLogin
     }
 

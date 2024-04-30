@@ -8,7 +8,7 @@ const LandScape = () => {
     const [allDataPro, setAllDataPro] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:5000/craft')
+        fetch('https://painting-and-drawing-server-nu.vercel.app/craft')
             .then(res => res.json())
             .then(data => {
                 

@@ -2,32 +2,34 @@ import { useContext } from "react";
 import { Helmet } from "react-helmet";
 import { AuthContext } from "../providers/AuthProvider";
 import { useNavigate } from "react-router-dom";
+import { updateProfile } from "firebase/auth";
 
 const UpdateProfile = () => {
-    const { updateUserProfile, user } = useContext(AuthContext);
+    const {  user } = useContext(AuthContext);
     console.log(user)
     const navigate = useNavigate();
 
 
     const handleUpdate = e => {
         e.preventDefault()
-        const name = e.target.name.value 
+        const name = e.target.name.value
         const photo = e.target.photo.value
 
+        updateProfile(user, {
+            displayName: name,
+            photoURL: photo 
+        })
+        navigate('/profile')
+        
 
-        updateUserProfile(name, photo)
-            .then(() => {
-                navigate('/profile')
-            })
-            .catch(error => {
-                console.log(error)
-            })
+
+         
     }
 
 
 
     return (
-        <div className="min-h-screen"> 
+        <div className="min-h-screen">
             <Helmet>
                 <title>UpdateProfile</title>
             </Helmet>
@@ -36,10 +38,10 @@ const UpdateProfile = () => {
 
                 <form onSubmit={handleUpdate} >
                     <p>Name</p>
-                    <input className="border-2 rounded-md w-full px-4 py-2 mb-2" type="text" name="name" defaultValue={user?.displayName}   placeholder="Name" id="name" />
+                    <input className="border-2 rounded-md w-full px-4 py-2 mb-2" type="text" name="name" defaultValue={user?.displayName} placeholder="Name" id="name" />
 
                     <p>Photo URL</p>
-                    <input className="border-2 rounded-md w-full px-4 py-2 mb-2" type="text" name="photo"  defaultValue={user?.photoURL}  placeholder="Photo URL" id="photo" />
+                    <input className="border-2 rounded-md w-full px-4 py-2 mb-2" type="text" name="photo" defaultValue={user?.photoURL} placeholder="Photo URL" id="photo" />
 
                     <input className=" rounded-md hover:bg-green-400 bg-green-500 w-full px-4 py-2 text-center font-bold text-lg text-white my-3" type="submit" value="Update" />
                 </form>
