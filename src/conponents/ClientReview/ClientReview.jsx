@@ -25,9 +25,9 @@ const ClientReview = () => {
                                 {/* Style will be inherited from the parent element */}
                                 <Typewriter
                                     words={['The most trusty site .Nothing to lose but more to get']}
-                                    loop={5}
+                                    loop={50}
                                     cursor
-                                    cursorStyle='_'
+                                    cursorStyle='😍'
                                     typeSpeed={70}
                                     deleteSpeed={50}
                                     delaySpeed={1000}
@@ -55,9 +55,9 @@ const ClientReview = () => {
                                 {/* Style will be inherited from the parent element */}
                                 <Typewriter
                                     words={['I got best deal.If anyone looking best site they are on right place']}
-                                    loop={5}
+                                    loop={50}
                                     cursor
-                                    cursorStyle='_'
+                                    cursorStyle='😍'
                                     typeSpeed={70}
                                     deleteSpeed={50}
                                     delaySpeed={1000}
@@ -86,9 +86,9 @@ const ClientReview = () => {
                                 {/* Style will be inherited from the parent element */}
                                 <Typewriter
                                     words={['I got the deal i was looking for so far.This website got best deal']}
-                                    loop={5}
+                                    loop={50}
                                     cursor
-                                    cursorStyle='_'
+                                    cursorStyle='😍'
                                     typeSpeed={70}
                                     deleteSpeed={50}
                                     delaySpeed={1000}

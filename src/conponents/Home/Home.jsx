@@ -35,9 +35,9 @@ const Home = () => {
                         {/* Style will be inherited from the parent element */}
                         <Typewriter
                             words={['Art & Craft Categories']}
-                            loop={5}
+                            loop={50}
                             cursor
-                            cursorStyle='_'
+                            cursorStyle='😍'
                             typeSpeed={70}
                             deleteSpeed={50}
                             delaySpeed={1000}

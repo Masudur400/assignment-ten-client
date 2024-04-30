@@ -23,9 +23,9 @@ const CraftItemsSection = () => {
           {/* Style will be inherited from the parent element */}
           <Typewriter
             words={['Craft Items']}
-            loop={5}
+            loop={50}
             cursor
-            cursorStyle='_'
+            cursorStyle='😍'
             typeSpeed={70}
             deleteSpeed={50}
             delaySpeed={1000} 
