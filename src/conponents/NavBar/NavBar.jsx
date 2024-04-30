@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../providers/AuthProvider";
+import { Typewriter } from 'react-simple-typewriter'
 
 
 const NavBar = () => {
@@ -9,20 +10,20 @@ const NavBar = () => {
 
     const [theme, setTheme] = useState('light')
     // const [mode, setMode] = useState('light')
-     
+
 
 
 
 
     const handleTheme = (e) => {
-         
 
-        if(e.target.checked){
-            setTheme('dark') 
+
+        if (e.target.checked) {
+            setTheme('dark')
         }
-        else{
+        else {
             setTheme('light')
-        } 
+        }
 
         // const html = document.documentElement;
 
@@ -40,18 +41,18 @@ const NavBar = () => {
 
     }
 
-//     useEffect(() => {
-//     const currentMode = localStorage.getItem("mode") || "light";
-//     document.documentElement.classList.add(currentMode); 
-//     setMode(currentMode);
-//   }, []);
+    //     useEffect(() => {
+    //     const currentMode = localStorage.getItem("mode") || "light";
+    //     document.documentElement.classList.add(currentMode); 
+    //     setMode(currentMode);
+    //   }, []);
 
-    useEffect(()=>{
-        localStorage.setItem('theme', theme) 
+    useEffect(() => {
+        localStorage.setItem('theme', theme)
         const localTheme = localStorage.getItem('theme')
-        document.querySelector('html').setAttribute('data-theme',localTheme)
-         
-    },[theme])
+        document.querySelector('html').setAttribute('data-theme', localTheme)
+
+    }, [theme])
 
 
 
@@ -66,7 +67,7 @@ const NavBar = () => {
         <li> <NavLink to="/">Home</NavLink></li>
         <li> <NavLink to="allCard">All Art & craft</NavLink></li>
         <li> <NavLink to="addCraft">Add Craft Item</NavLink></li>
-        <li> <NavLink to="myCraftList">My Art&Craft List</NavLink></li> 
+        <li> <NavLink to="myCraftList">My Art&Craft List</NavLink></li>
         <li> <NavLink to="profile">Profile</NavLink></li>
     </>
 
@@ -82,7 +83,20 @@ const NavBar = () => {
                             {links}
                         </ul>
                     </div>
-                    <p className="text-center max-sm:w-[70%]"><Link to="/" className="btn btn-ghost text-xl "> Painting & Drawing</Link></p>
+
+                    <p >
+                        <span style={{ color: 'white', marginLeft: "20px", fontWeight: 'bold' }}>
+                            {/* Style will be inherited from the parent element */}
+                            <Typewriter className="btn btn-ghost text-xl text-center max-sm:w-[70%]"
+                                words={['Painting & Drawing']}
+                                loop={50}
+                                cursor
+                                cursorStyle='_'
+                                typeSpeed={70}
+                                deleteSpeed={50}
+                                delaySpeed={1000}
+                            />
+                        </span></p>
 
                 </div>
                 <div className="navbar-center hidden lg:flex">
@@ -96,7 +110,8 @@ const NavBar = () => {
                         user ? <div className="flex max-sm:w-full max-sm:gap-20   gap-3  ">
 
                             <div className="tooltip tooltip-bottom" data-tip={user?.displayName}>
-                                <img className="w-12 h-12 rounded-full bg-white" alt="" src={user?.photoURL}
+                                <img className="w-12 h-12 rounded-full bg-white" alt="" src={user?.photoURL
+                                }
                                 />
                             </div>
                             <button onClick={handleLogOut} className="btn font-bold text-green-500">Log Out</button> </div>

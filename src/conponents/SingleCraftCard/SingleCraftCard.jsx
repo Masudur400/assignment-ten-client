@@ -1,5 +1,6 @@
 
 import PropTypes from 'prop-types';
+import { Fade } from 'react-awesome-reveal';
 import { Link } from 'react-router-dom';
 
 
@@ -10,6 +11,7 @@ const SingleCraftCard = ({ craft }) => {
     return ( 
 
         <div>
+            <Fade>
             <div className="overflow-x-auto">
                 <table className="table mb-5 border-b-2">
                      
@@ -55,6 +57,7 @@ const SingleCraftCard = ({ craft }) => {
 
                 </table>
             </div>
+            </Fade>
         </div>
     );
 };

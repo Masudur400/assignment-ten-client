@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { Typewriter } from "react-simple-typewriter";
 
  
 const CraftItemsSection = () => {
@@ -17,8 +18,22 @@ const CraftItemsSection = () => {
 
     return (
         <div>
-            <h2 className="text-2xl font-bold text-center mb-5">Craft Items  </h2>
-            <p className="md:w-1/3 mx-auto">Craft items can be made from various materials, including wood, metal, glass, fabric, paper, clay, and natural elements like shells or stones. The choice of material often depends on the desired aesthetic, function, and the artisan expertise.</p>
+            <h2 className="text-2xl font-bold text-center mb-5">
+            <span style={{ color: '', fontWeight: 'bold' }}>
+          {/* Style will be inherited from the parent element */}
+          <Typewriter
+            words={['Craft Items']}
+            loop={5}
+            cursor
+            cursorStyle='_'
+            typeSpeed={70}
+            deleteSpeed={50}
+            delaySpeed={1000} 
+          />
+        </span> 
+        </h2>
+            <p className="md:w-1/3 mx-auto">
+                Craft items can be made from various materials, including wood, metal, glass, fabric, paper, clay, and natural elements like shells or stones. The choice of material often depends on the desired aesthetic, function, and the artisan expertise.</p>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mt-5 md:mt-10">
                 {
@@ -28,7 +43,8 @@ const CraftItemsSection = () => {
                            </div>
                           <div className='flex-grow'>
                            <h2 className='text-2xl font-bold mb-5'>{slItem.itemName}</h2>
-                          <h2 className='text-2xl font-bold  '>Category: <span className='text-2xl font-bold text-red-400'>{slItem.subcategoryName}</span></h2>
+                          <h2 className='text-2xl font-bold  '>Category: 
+                          <span className='text-2xl font-bold text-red-400'>{slItem.subcategoryName}</span></h2>
                            <div className='my-5 flex justify-between items-center '>
                               <p className='font-bold'>Price : {slItem.price}</p>
                               <p className='font-bold flex gap-2'>Rating : <span className='text-yellow-700 text-xl'>{slItem.rating}</span></p>

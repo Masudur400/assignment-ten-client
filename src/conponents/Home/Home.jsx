@@ -11,6 +11,7 @@ import p4 from '../../assets/images/Cartoon Drawing.jfif';
 import p5 from '../../assets/images/Watercolour Painting.jpg';
 import p6 from '../../assets/images/Portrait Drawing.jfif';
 import { Helmet } from "react-helmet";
+import { Typewriter } from "react-simple-typewriter";
 
 
 
@@ -29,7 +30,20 @@ const Home = () => {
             </div>
 
             <div className="mt-14">
-                <h3 className="text-2xl font-extrabold text-center my-9">Art & Craft Categories</h3>
+                <h3 className="text-2xl font-extrabold text-center my-9">
+                    <span style={{ color: '', fontWeight: 'bold' }}>
+                        {/* Style will be inherited from the parent element */}
+                        <Typewriter
+                            words={['Art & Craft Categories']}
+                            loop={5}
+                            cursor
+                            cursorStyle='_'
+                            typeSpeed={70}
+                            deleteSpeed={50}
+                            delaySpeed={1000}
+                        />
+                    </span> 
+                    </h3>
                 <p className="md:w-1/3 mx-auto my-7 text-justify">Painting involves applying pigment to a surface, typically canvas, paper, or wood, to create images or express ideas. It encompasses various painting mediums such as oil, acrylic, watercolor, gouache, and encaustic, each with its own unique characteristics and techniques.</p>
                 <div className="mt-5 md:mt-10 grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:px-5">
                     <div className="p-5 shadow-md rounded-md">
@@ -51,7 +65,7 @@ const Home = () => {
                     </div>
 
                     <div className="p-5 shadow-md rounded-md">
-                    <div className="flex justify-center items-center">
+                        <div className="flex justify-center items-center">
                             <img className="w-[300px] h-[200px] border" src={p5} alt="" />
                         </div>
                         <h2 className="text-2xl font-bold text-center my-5">WaterColour Categories</h2>
@@ -60,7 +74,7 @@ const Home = () => {
                     </div>
 
                     <div className="p-5 shadow-md rounded-md">
-                    <div className="flex justify-center items-center">
+                        <div className="flex justify-center items-center">
                             <img className="w-[300px] h-[200px] border" src={p2} alt="" />
                         </div>
                         <h2 className="text-2xl font-bold text-center my-5">OilPainting Categories</h2>
@@ -69,7 +83,7 @@ const Home = () => {
                     </div>
 
                     <div className="p-5 shadow-md rounded-md">
-                    <div className="flex justify-center items-center">
+                        <div className="flex justify-center items-center">
                             <img className="w-[300px] h-[200px] border" src={p3} alt="" />
                         </div>
                         <h2 className="text-2xl font-bold text-center my-5">Charcoal Sketching Categories</h2>
@@ -78,7 +92,7 @@ const Home = () => {
                     </div>
 
                     <div className="p-5 shadow-md rounded-md">
-                    <div className="flex justify-center items-center">
+                        <div className="flex justify-center items-center">
                             <img className="w-[300px] h-[200px] border" src={p4} alt="" />
                         </div>
                         <h2 className="text-2xl font-bold text-center my-5">Cartoon Drawing Categories</h2>
