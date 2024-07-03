@@ -21,7 +21,6 @@
 
 # Server Link
 
-- client server Link : https://assignment-ten-354f8.web.app/
+- live Link : https://assignment-ten-354f8.web.app/
 
-
-- server site code : https://painting-and-drawing-server-nu.vercel.app/craft
+- server site code : https://github.com/Masudur400/painting-drowing-server-as-10
