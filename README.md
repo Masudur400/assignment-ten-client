@@ -24,3 +24,7 @@
 - live Link : https://assignment-ten-354f8.web.app/
 
 - server site code : https://github.com/Masudur400/painting-drowing-server-as-10
+
+# Run app 
+- npm i
+- npm run dev
